@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  background-color: white;
+}
+
+.gradient-section {
+  background-image: url(./assets/images/gradientBackground.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0 0 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.gradient-section > :nth-child(1) {
+  font-size: 18px;
+  font-family: hanken, sans-serif;
+  font-weight: bold;
+  color: #CAC9FF;
+}
+
+.circled-score {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./assets/images/Oval-small.png);
+  background-repeat: none;
+  background-size: cover;
+}
+
+.circled-score > :nth-child(1) {
+  color: white;
+  font-size: 56px;
+  font-weight: bolder;
+  font-family: hanken, sans-serif;
+}
+
+.circled-score > :nth-child(2) {
+  font-size: 16px;
+  font-weight: bold;
+  color: #CAC9FF;
+}
+
+.gradient-section > :nth-child(3) {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.gradient-section > :nth-child(4) {
+  font-size: 18px;
+  font-weight: 600;
+  color: #CAC9FF;
+  text-align: center;
+  padding: 0 50px;
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+
+.score-section {
+  margin: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+}
+
+.score-section > :nth-child(1) {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.score-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.score-card > :nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 5px
+}
+
+.redBackground,
+.yellowBackground,
+.greenBackground,
+.blueBackground {
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.redBackground {
+  background-color: #ffe6e6;
+}
+
+.red {
+  font-size: 16px;
+  font-weight: 700;
+  color: #FF5555;
+}
+
+.scorePoints > span {
+  font-weight: 800;
+}
+
+.yellowBackground {
+  background-color: #f8efde;
+}
+
+.yellow {
+  color: #FFB21E;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.greenBackground {
+  background-color: #ecfaf7;
+}
+
+.green {
+  color: #00BB8F;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.blueBackground {
+  background-color: #e1e4fd;
+}
+
+.blue {
+  color: #1125D6;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.btn {
+  background-color: #303B59;
+  width: 100%;
+  border-radius: 30px;
+  padding: 20px;
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  transition: all ease-in 0.2s;
+  margin-bottom: 50px;
+}
+
+.btn:hover {
+  background-color: #1125D6;
+}
+
+@media (min-width: 900px) {
+
+  body {
+    background-color: #ECF2FF;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+  section {
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+  }
+
+  .gradient-section {
+    background-image: url(./assets/images/Rectangle\ Copy-long.png);
+    width: 50%;
+    background-size: auto;
+    height: 100%;
+    border-radius: 30px;
+    justify-content: space-around;
+    background-size: contain;
+  }
+
+  .score-section {
+    width: 50%;
+   justify-content: center;
+  }
+
+  .score-card {
+    padding: 23px;
+  }
+
+  .btn {
+    padding: 15px;
+    margin-bottom: 0;
+  }
+}
