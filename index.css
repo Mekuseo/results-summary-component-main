@@ -79,6 +79,15 @@ section {
   gap: 20px;
 }
 
+#score-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
 .score-section > :nth-child(1) {
   font-size: 18px;
   font-weight: bold;
@@ -87,8 +96,9 @@ section {
 .score-card {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
+  /* justify-content: space-between;
+  width: 100%; */
 }
 
 .score-card > :nth-child(1) {
@@ -99,19 +109,19 @@ section {
   padding: 0 5px
 }
 
-.redBackground,
-.yellowBackground,
-.greenBackground,
-.blueBackground {
+.reactionBackground,
+.memoryBackground,
+.verbalBackground,
+.visualBackground {
   border-radius: 10px;
   padding: 20px;
 }
 
-.redBackground {
+.reactionBackground {
   background-color: #ffe6e6;
 }
 
-.red {
+.reaction {
   font-size: 16px;
   font-weight: 700;
   color: #FF5555;
@@ -121,31 +131,31 @@ section {
   font-weight: 800;
 }
 
-.yellowBackground {
+.memoryBackground {
   background-color: #f8efde;
 }
 
-.yellow {
+.memory {
   color: #FFB21E;
   font-size: 16px;
   font-weight: 700;
 }
 
-.greenBackground {
+.verbalBackground {
   background-color: #ecfaf7;
 }
 
-.green {
+.verbal {
   color: #00BB8F;
   font-size: 16px;
   font-weight: 700;
 }
 
-.blueBackground {
+.visualBackground {
   background-color: #e1e4fd;
 }
 
-.blue {
+.visual {
   color: #1125D6;
   font-size: 16px;
   font-weight: 700;
