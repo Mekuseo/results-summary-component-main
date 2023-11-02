@@ -41,8 +41,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/Mekuseo/results-summary-component-main)
+- Live Site URL: [site-url](https://mekuseo.github.io/results-summary-component-main/)
 
 ## My process
 
@@ -52,15 +52,39 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - CSS custom properties
 - Flexbox
 - Mobile-first workflow
+- Javascript
 
 ### What I learned
 
-I have learnt to dynamically populate contents from a local json
+I have learnt to dynamically populate contents from a local json using fetch
 
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+fetch('data.json')
+  .then(response => response.json())
+  .then(data => {
+
+    const scoreContainer = document.getElementById('score-container');
+    
+    data.forEach(item => {
+      const scoreCard = document.createElement('div');
+      scoreCard.className = 'score-card ' + item.category.toLowerCase() + 'Background';
+      
+      const cardContent = `
+        <div>
+          <img src="${item.icon}" alt="${item.category}-icon" />
+          <p class="${item.category.toLowerCase()}">${item.category}</p>
+        </div>
+        <div>
+          <p class="scorePoints"><span>${item.score}</span>/100</p>
+        </div>
+      `;
+      scoreCard.innerHTML = cardContent;
+      scoreContainer.appendChild(scoreCard);
+    });
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+  });
 ```
 
 ### Continued development
